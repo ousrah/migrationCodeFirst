@@ -1,0 +1,14 @@
+Enable-Migrations -ContextTypeName WebApplication4.Model1
+add-migration first -IgnoreChanges
+update-database
+
+-- faire les modifs sur les classes pour ajouter/supprimer/modifier des champs
+
+add-migration second
+
+update-database
+
+get-migrations
+
+
+update-database -TargetMigration:"202204262333200_first"
